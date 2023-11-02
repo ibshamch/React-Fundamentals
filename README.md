@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+### Remove BoilerPlate
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+-- delete src
+-- create new src
+=> create index.js
 
-## Available Scripts
+### First Component
 
-In the project directory, you can run:
+function Greeting (){
+return <h2>My first Component</h2>
+}
 
-### `npm start`
+// Arrow function also work
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+-- starts with Capital letter
+--- returns jsx (html)
+--- always close tag
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Extensions
 
-### `npm test`
+-- auto rename
+-- prettier
+-- emmet.includeLanguages = {
+"javascript" : "javascriptreact"
+}
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-- rafce
+-- rfce
+--- same as file name
+--- react auto import
+-uncheck
+-React snippets > setting : import react on top
 
-### `npm run build`
+### JSX Rules
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-- always return single element
+--semantics section/articles
+-- Fragments (invisible divs/nodes)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Naming Conventions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-- camelCase properties
+--- className instead of class
 
-### `npm run eject`
+### close all html tags in react
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+--- <img/>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Nest Components in Components
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+function Greeting() {
+return (
+<Fragment id="component">
+<Hello />
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</Fragment>
+);
+}
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+const Hello = () => {
+return <div>Hello</div>;
+};
 
-## Learn More
+### Adding CSS
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+-- create index.css pr components based css in src
+-- import in index.js or in the specific component
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+--- import "./index.css"
+-- js objects as css inline styles
 
-### Code Splitting
+### Javascript in JSX
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+-- {} everything in curly is javascript
+-- value must be an expression , cant be a statement
+-- on type of value you can use built-in object wrapper functions
 
-### Analyzing the Bundle Size
+### Props system
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+--- Remember Components are basically functions
+--- What you pass to functions as data ? Arguments !
+--- Similarly you pass arguments in components that will be used as data this is called prop systems and arguments being passed are called props.
+---- Every component by default has props object
+---- argument data is passed in the prop object {}
+---- if string = "" , if its a number , variable or anything else it should be in curly brackets {}.
+--- props data can be different for different component instances
+--- while accessing props passed name should be same
+--- you can not access prop if its not there
+### props system make data dynamic. 
+### props multiple approaches
+ --- const {Destructuring Objects} = props
+ --- Directly put object as parameter instead of props and give parameters
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ 
